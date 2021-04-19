@@ -1,11 +1,6 @@
 class User < ApplicationRecord
     validates :password, length: { minimum: 6, allow_nil: true }
 
-    has_many :patients,
-        primary_key: :id,
-        foreign_key: :user_id,
-        class_name: :Patient
-
     before_validation :ensure_session_token
 
     attr_reader :password

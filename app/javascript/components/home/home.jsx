@@ -39,15 +39,15 @@ const useStyles = makeStyles({
 
 const steps = [
   {
-    text: "Create custom latch hook patterns with any photo.",
+    text: "Fill out the required information and create an account.",
     img: require("../../../assets/images/home1.svg"),
   },
   {
-    text: "Upload photo and select photo options.",
+    text: "Communicate with your doctor in real time.",
     img: require("../../../assets/images/home2.svg"),
   },
   {
-    text: "Download photo and start latchifying your creation.",
+    text: "Access a variety of tools and resources.",
     img: require("../../../assets/images/home3.svg"),
   },
 ];

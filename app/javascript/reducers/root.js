@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
 
 import sessionReducer from "./session";
-import userReducer from "./user";
 import patientReducer from "./patient";
+import patientListReducer from "./patientList";
 
 export default combineReducers({
   session: sessionReducer,
-  user: userReducer,
   patient: patientReducer,
+  patientList: patientListReducer,
 });

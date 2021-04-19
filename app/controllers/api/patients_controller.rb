@@ -1,4 +1,6 @@
 class Api::PatientsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def new
     @patient= Patient.new
     render 'api/patients/new'
@@ -13,6 +15,12 @@ def create
     end
 end
 
+def index
+  @patients = Patient.all
+  respond_to do |format|
+    format.json 
+  end
+end
 
 def show
     @patient = Patient.find(params[:id])
@@ -35,6 +43,6 @@ end
 
 private
 def patient_params
-    params.require(:patient).permit(:email, :dob, :name, :phone, :address, :user_id)
+    params.permit(:name, :email, :dob, :phone, :address, :appointment, :photo)
 end
 end

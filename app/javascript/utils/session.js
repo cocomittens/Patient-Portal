@@ -1,38 +1,37 @@
-export const getPatient = (patient) => {
+export const getPatient = (patientId) => {
   return $.ajax({
-    url: "/api/patients",
+    url: `/api/patients/${patientId}`,
     method: "GET",
-    data: { patient },
   });
 };
 
-export const getPatients = (user) => {
+export const getPatients = () => {
   return $.ajax({
-    url: `/api/users/${user}/patients`,
+    url: `/api/patients`,
     method: "GET",
-    data: { user },
   });
 };
 
 export const createPatient = (patient) => {
+  console.log(patient);
   return $.ajax({
-    url: "/api/patient",
+    url: "/api/patients",
     method: "POST",
-    data: { patient },
+    data: patient,
   });
 };
 
 export const updatePatient = (patient) => {
   return $.ajax({
-    url: `/api/patient/${patient.id}`,
+    url: `/api/patients/${patient.id}`,
     method: "PATCH",
-    data: { patient },
+    data: patient,
   });
 };
 
 export const deletePatient = (patientId) => {
   return $.ajax({
-    url: `/api/patient/${patientId}`,
+    url: `/api/patients/${patientId}`,
     method: "DELETE",
   });
 };
