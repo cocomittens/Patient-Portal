@@ -54,7 +54,7 @@ const Signup = (props) => {
       alignItems="center"
     >
       <Grid item>
-        <Typography variant="h1">Sign Up</Typography>
+        <Typography variant="h1">Register</Typography>
       </Grid>
 
       <form name="signup">
@@ -65,22 +65,14 @@ const Signup = (props) => {
           spacing={4}
           justify="center"
         >
-          <Grid conntainer item xs={10} sm={9} md={8} lg={7}>
+          <Grid item xs={10} sm={9} md={8} lg={7}>
             <ImageUploading
               value={images}
               onChange={onChange}
               maxNumber={maxNumber}
               dataURLKey="data_url"
             >
-              {({
-                imageList,
-                onImageUpload,
-                onImageRemoveAll,
-                onImageUpdate,
-                onImageRemove,
-                isDragging,
-                dragProps,
-              }) => (
+              {({ onImageUpload, dragProps }) => (
                 <Grid
                   container
                   direction="column"
@@ -193,6 +185,7 @@ const Signup = (props) => {
             <TextField
               required
               fullWidth
+              id="datetime-local"
               name="appointment"
               label="Appointment time"
               type="datetime-local"
