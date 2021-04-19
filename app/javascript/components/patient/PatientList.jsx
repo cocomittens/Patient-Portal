@@ -19,13 +19,17 @@ import { getPatientList } from "../../actions/patientList";
 const useStyles = makeStyles({
   add: { margin: "16px" },
   edit: { margin: "0 8px" },
-  odd: { backgroundColor: "#DED6D6" },
+  odd: { backgroundColor: "#e3f6f5" },
+  img: {
+    maxHeight: "5vw",
+    maxWidth: "5vh",
+  },
 });
 
 const StyledRow = withStyles(() => ({
   root: {
     "&:nth-of-type(odd)": {
-      backgroundColor: "#F6F4F4",
+      backgroundColor: "#e3f6f5",
     },
   },
 }))(TableRow);
@@ -35,7 +39,6 @@ const PatientList = () => {
   const classes = useStyles();
   useEffect(() => dispatch(getPatientList()), []);
   const patients = useSelector((state) => state.patientList);
-  console.log(patients);
   return (
     <TableContainer component={Paper}>
       <Typography variant="h2" align="center">
@@ -58,10 +61,10 @@ const PatientList = () => {
             <StyledRow key={index}>
               <TableCell>
                 <Grid container justify="space-between">
-                  <Grid item>
-                    <Typography variant="subtitle1">
-                      {patient.photo ? <img src={patient.photo} /> : null}
-                    </Typography>
+                  <Grid item xs={1}>
+                    {patient.photo ? (
+                      <img className={classes.img} src={patient.photo} />
+                    ) : null}
                   </Grid>
                 </Grid>
               </TableCell>
