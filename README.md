@@ -14,6 +14,7 @@
 ## How to Use
 * Clone this repo
 * Open a terminal in project directory, type ```rails s``` and ```npm start```
+* Type ```localhost:3000``` in any browser
 * Click "Get started"
 * Fill out registration form
 * You will then be redirected to a table of all registered patients
