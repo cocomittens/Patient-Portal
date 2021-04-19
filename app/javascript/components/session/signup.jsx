@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 
 const Signup = (props) => {
   const classes = useStyles();
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState(null);
   const maxNumber = 1;
   const onChange = (imageList, addUpdateIndex) => {
     // data for submit
@@ -108,7 +108,11 @@ const Signup = (props) => {
                     <Grid item xs={8}>
                       <img
                         className={classes.svg}
-                        src={require("../../../assets/images/add_files.svg")}
+                        src={
+                          images
+                            ? images
+                            : require("../../../assets/images/add_files.svg")
+                        }
                       />
                     </Grid>
                     <Grid item xs={12}>
