@@ -16,4 +16,7 @@
 * You will then be redirected to a table of all registered patients
 
 ## Future Features
-* Edit and Delete functionality on table
+* Edit and Delete functionality on patient table
+* Better input validation
+* Full size image modal upon clicking on thumbnail image on table
+* Sorting and filtering on patient table
