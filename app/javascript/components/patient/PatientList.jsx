@@ -12,8 +12,8 @@ import {
 } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { useDispatch, useSelector } from "react-redux";
 
-import { useSelector, useDispatch } from "react-redux";
 import { getPatientList } from "../../actions/patientList";
 
 const useStyles = makeStyles({
@@ -62,9 +62,9 @@ const PatientList = () => {
               <TableCell>
                 <Grid container justify="space-between">
                   <Grid item xs={1}>
-                    {patient.photo ? (
+                    {/* {patient.photo ? (
                       <img className={classes.img} src={patient.photo} />
-                    ) : null}
+                    ) : null} */}
                   </Grid>
                 </Grid>
               </TableCell>
