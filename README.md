@@ -1,24 +1,16 @@
-# README
+# Patient Registration Portal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Screenshots
 
-Things you may want to cover:
+### Splash Page
 
-* Ruby version
+### Registration Form
 
-* System dependencies
+### Patient List
 
-* Configuration
+## How to Use
+* Clone this repo
+* ```rails s```
+* ```npm start```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Future Features
