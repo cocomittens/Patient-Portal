@@ -13,7 +13,7 @@
 
 ## How to Use
 * Clone this repo
-* Open a terminal in project directory, type ```rails s``` and ```npm start```
+* Open a terminal in project directory, type ```npm i``, then ```rails s``` and ```npm start```
 * Type ```localhost:3000``` in any browser
 * Click "Get started"
 * Fill out registration form
